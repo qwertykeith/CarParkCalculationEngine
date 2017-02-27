@@ -32,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ninject, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.4.0.0-beta-0134\lib\net45\Ninject.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,7 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ParkingCostCalculatorEngine.StaticData\ParkingCostCalculatorEngine.StaticData.csproj">
+      <Project>{66a0f28f-b4e7-4647-a93c-de2f190f7785}</Project>
+      <Name>ParkingCostCalculatorEngine.StaticData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParkingCostCalculatorEngine\ParkingCostCalculatorEngine.csproj">
+      <Project>{f67bc63d-a8dd-49e4-8776-ce057297b053}</Project>
+      <Name>ParkingCostCalculatorEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

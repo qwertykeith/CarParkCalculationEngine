@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace ParkingCostCalculatorEngine
 {
     /// <summary>
-    /// Fees and information for parking
+    /// Receipt information containing resultant fees and other data calculated after a patron's parking experience
     /// </summary>
-    public class Receipt
+    public class ReceiptModel
     {
         public string RateName { get; set; }
         public decimal Price { get; set; }
-        public ParkingTime Details { get; set; }
+        public ParkingTimeModel Details { get; set; }
     }
 }

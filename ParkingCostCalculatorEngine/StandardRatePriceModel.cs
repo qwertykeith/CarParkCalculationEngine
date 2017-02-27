@@ -8,12 +8,12 @@ namespace ParkingCostCalculatorEngine
 {
     /// <summary>
     /// Standard rate prices charged by the hour
+    /// minutes should be in decimal, eg 1:30 as 1.5 hours
     /// </summary>
-    public class StandardRatePrice
+    public class StandardRatePriceModel
     {
         public decimal Price { get; set; }
-        public double MinHours { get; set; }
-        public double MaxHours { get; set; }
+        public double UpToHours { get; set; }
 
     }
 }

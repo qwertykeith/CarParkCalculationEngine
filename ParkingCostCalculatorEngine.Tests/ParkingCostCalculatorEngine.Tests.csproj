@@ -45,15 +45,24 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="FlatRates.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StandardRates.cs" />
+    <Compile Include="WierdEdgeCases.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ParkingCostCalculatorEngine.StaticData\ParkingCostCalculatorEngine.StaticData.csproj">
+      <Project>{66a0f28f-b4e7-4647-a93c-de2f190f7785}</Project>
+      <Name>ParkingCostCalculatorEngine.StaticData</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ParkingCostCalculatorEngine\ParkingCostCalculatorEngine.csproj">
       <Project>{f67bc63d-a8dd-49e4-8776-ce057297b053}</Project>
       <Name>ParkingCostCalculatorEngine</Name>
